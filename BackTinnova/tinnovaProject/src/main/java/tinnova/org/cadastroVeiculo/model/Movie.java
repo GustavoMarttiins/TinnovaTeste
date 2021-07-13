@@ -105,4 +105,9 @@ public class Movie {
 		this.date = date;
 	}
 
+	public Movie() {
+	}
+	
+	
+
 }

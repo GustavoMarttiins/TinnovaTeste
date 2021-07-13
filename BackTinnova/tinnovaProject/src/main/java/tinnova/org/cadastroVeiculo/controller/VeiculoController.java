@@ -50,11 +50,11 @@ public class VeiculoController {
 
 	@PutMapping
 	public ResponseEntity<Movie> put (@RequestBody Movie movie){
-		return ResponseEntity.ok(repository.save(movie));				
+		return ResponseEntity.status(HttpStatus.OK).body(repository.save(movie));				
 	}
 	
 	@DeleteMapping("/{id}")
-	public void delete(@PathVariable long id) {
+	public void delete(@PathVariable Long id) {
 		repository.deleteById(id);
 	}
 	
